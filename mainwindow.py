@@ -2021,11 +2021,15 @@ Balance Amt: Php %.2f
         try:
             if str(data_field[2]).isdigit() and str(data_field[3]).isdigit():
                 if str(data_field[1]).isdigit():
-                    if len(data_field[0]) > 3:
-                        return True
-                    else:
+                    # Check name length
+                    if len(data_field[0]) <= 3:
                         QMessageBox.critical(self, "Message", "Name is too short")
                         return False
+                    # Check for special characters
+                    if not re.match(r"^[a-zA-Z0-9\s]+$", data_field[0]):
+                        QMessageBox.critical(self, "Message", "Name should not contain special characters")
+                        return False
+                    return True
                 else:
                     QMessageBox.critical(self, "Message", "PRICE should be a number")
                     return False
@@ -3185,10 +3189,11 @@ class MyAppDialog ( QDialog ):
                             merchandise_list[new_merchandise] = _qty
                             db.WJV_db.insert(Ticket_ID=ticket_id,Room_Type=room_type_,extra_heads=0,Room_Merchandise=merchandise_list,Room_Meals={},Status_ ='Open',
                             Extended_=False,Check_In=cur_datetime,Check_Out=None,Room_Number =room_x, Cashier_ = self.username__, Total_Price = 0, Mer_Price =0, RM_Price = 0)
-                            myquery = (db.Inventory_tracking.Merchandise_ID ==  id_2) & (db.Inventory_tracking.Ref_Date == datetime.now().date())
-                            data_row = db(myquery).select()
-                            current_inventory = data_row[0].PI_ + _qty
-                            db(db.Inventory_tracking.id==data_row[0].id).update(PI_= current_inventory)
+                            if selection_type != "WRISTBAND":
+                                myquery = (db.Inventory_tracking.Merchandise_ID ==  id_2) & (db.Inventory_tracking.Ref_Date == datetime.now().date())
+                                data_row = db(myquery).select()
+                                current_inventory = data_row[0].PI_ + _qty
+                                db(db.Inventory_tracking.id==data_row[0].id).update(PI_= current_inventory)
                             myquery = (db.Merchandise_rates_db.id == id_2)
                             query2_ = db(myquery).select()
                             __stock = int(query2_[0].Quantity_)
@@ -3216,10 +3221,11 @@ class MyAppDialog ( QDialog ):
                             except:
                                 merchandise_list[new_merchandise] = int(self.ui.mcd_qty.text())
                             db(db.WJV_db.Ticket_ID == self.db_records_.Ticket_ID).update(Room_Merchandise=merchandise_list)
-                            myquery = (db.Inventory_tracking.Merchandise_ID ==  id_2) & (db.Inventory_tracking.Ref_Date == datetime.now().date())
-                            data_row = db(myquery).select()
-                            current_inventory = data_row[0].PI_ + _qty
-                            db(db.Inventory_tracking.id==data_row[0].id).update(PI_= current_inventory)
+                            if selection_type != "WRISTBAND":
+                                myquery = (db.Inventory_tracking.Merchandise_ID ==  id_2) & (db.Inventory_tracking.Ref_Date == datetime.now().date())
+                                data_row = db(myquery).select()
+                                current_inventory = data_row[0].PI_ + _qty
+                                db(db.Inventory_tracking.id==data_row[0].id).update(PI_= current_inventory)
 
                             myquery = (db.Merchandise_rates_db.id == id_2)
                             query2_ = db(myquery).select()
@@ -3247,10 +3253,11 @@ class MyAppDialog ( QDialog ):
                         except:
                             merchandise_list[new_merchandise] = _qty
                         db(db.WJV_db.Ticket_ID == self.db_records_.Ticket_ID).update(Room_Merchandise=merchandise_list)
-                        myquery = (db.Inventory_tracking.Merchandise_ID ==  id_2) & (db.Inventory_tracking.Ref_Date == datetime.now().date())
-                        data_row = db(myquery).select()
-                        current_inventory = data_row[0].PI_ + _qty
-                        db(db.Inventory_tracking.id==data_row[0].id).update(PI_= current_inventory)
+                        if selection_type != "WRISTBAND":
+                            myquery = (db.Inventory_tracking.Merchandise_ID ==  id_2) & (db.Inventory_tracking.Ref_Date == datetime.now().date())
+                            data_row = db(myquery).select()
+                            current_inventory = data_row[0].PI_ + _qty
+                            db(db.Inventory_tracking.id==data_row[0].id).update(PI_= current_inventory)
                         myquery = (db.Merchandise_rates_db.id == id_2)
                         query2_ = db(myquery).select()
                         __stock = int(query2_[0].Quantity_)
@@ -3263,7 +3270,8 @@ class MyAppDialog ( QDialog ):
                     except Exception as e:
                         print (e)
                         db.rollback()
-
+        else:
+            QMessageBox.warning(self, 'Error', 'Please type quantity first!')
 
 
     def update_merchandise_2(self):
