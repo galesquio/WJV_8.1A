@@ -1,0 +1,28 @@
+DATE: Oct-09-2023 09:43 AM
+-----------------------------
+#0000000078
+ROOM_4
+REGULAR 3 Hrs Php 179
+CheckIn : Oct07 07:52
+CheckOut: Oct07 10:52
+Excess Hour: Php 4700.0
+Addl Head  : Php 0
+Merchandise: Php 0
+Total BILL : Php 4879.00
+Downpayment: Php 0.00
+Balance Amt: Php 4879.00
+
+-----------------------------
+#0000000080
+ROOM_2
+REGULAR 3 Hrs Php 179
+CheckIn : Oct07 07:52
+CheckOut: Oct07 10:52
+Excess Hour: Php 4700.0
+Addl Head  : Php 0
+Merchandise: Php 0
+Total BILL : Php 4879.00
+Downpayment: Php 0.00
+Balance Amt: Php 4879.00
+
+-----------------------------

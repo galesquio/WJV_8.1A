@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>275</width>
+    <height>335</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>275</width>
+    <height>335</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>275</width>
+    <height>335</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="1">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLineEdit" name="user_">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>150</y>
+        <width>221</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>36</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>36</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    padding-left: 40px; /* space for icon if you add one */
+    color: #333;
+    background-color: #f5f5f5;
+    font-size: 14px;
+}
+
+QLineEdit:hover {
+    border: 2px solid #999;
+    background-color: #ffffff;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3399ff;
+    background-color: #ffffff;
+    outline: none;
+}
+</string>
+      </property>
+      <property name="maxLength">
+       <number>12</number>
+      </property>
+      <property name="placeholderText">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="pass_">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>190</y>
+        <width>221</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>36</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>36</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    padding-left: 40px; /* space for icon if you add one */
+    color: #333;
+    background-color: #f5f5f5;
+    font-size: 14px;
+}
+
+QLineEdit:hover {
+    border: 2px solid #999;
+    background-color: #ffffff;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3399ff;
+    background-color: #ffffff;
+    outline: none;
+}
+</string>
+      </property>
+      <property name="maxLength">
+       <number>12</number>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>60</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.852273 rgba(255, 255, 255, 0), stop:0.875 rgba(255, 255, 255, 0), stop:0.886364 rgba(255, 255, 255, 0));</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#55557f;&quot;&gt;ENGINEERING&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>76</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Calibri</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;INNOVA&lt;/span&gt;&lt;/p&gt;&lt;p&gt;    telecom&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.852273 rgba(255, 255, 255, 0), stop:0.875 rgba(255, 255, 255, 0), stop:0.886364 rgba(255, 255, 255, 0));
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:20pt; font-weight:600; color:#35354f;&quot;&gt;gg&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="login_button">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>240</y>
+        <width>211</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>36</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>36</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #34495e;
+}
+
+QPushButton:pressed {
+    background-color: #1f2d3a;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Enter</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="close_">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>280</y>
+        <width>211</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.852273 rgba(255, 255, 255, 0), stop:0.875 rgba(255, 255, 255, 0), stop:0.886364 rgba(255, 255, 255, 0));
+border-radius: 9px;
+font: 75 10pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(53, 53, 79);</string>
+      </property>
+      <property name="text">
+       <string>Exit Program</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>20</y>
+        <width>81</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">image: url(:/newPrefix/555 marca dagua - png.png);
+border-image: url(:/newPrefix/logo2.png);
+border-radius: 35px;
+background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0.852273 rgba(255, 255, 255, 0), stop:0.875 rgba(255, 255, 255, 0), stop:0.886364 rgba(255, 255, 255, 0));
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

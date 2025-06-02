@@ -1,0 +1,42 @@
+timestamp: 2025-05-18T23:23:15.972744
+CREATE TABLE "WJV_db"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "ticket_id" CHAR(512) UNIQUE,
+    "rfid_" CHAR(512),
+    "room_type" CHAR(512),
+    "extra_heads" INTEGER,
+    "room_merchandise" TEXT,
+    "room_meals" TEXT,
+    "status_" CHAR(512),
+    "extended_" CHAR(1),
+    "check_in" TIMESTAMP,
+    "check_out" TIMESTAMP,
+    "room_number" CHAR(512),
+    "cashier_" CHAR(512),
+    "total_price" CHAR(512),
+    "mer_price" CHAR(512),
+    "rm_price" CHAR(512),
+    "price_" CHAR(512),
+    "uploaded_to_cloud" CHAR(1)
+);
+timestamp: 2025-05-18T23:25:28.150516
+CREATE TABLE "WJV_db"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "ticket_id" CHAR(512) UNIQUE,
+    "rfid_" CHAR(512),
+    "room_type" CHAR(512),
+    "extra_heads" INTEGER,
+    "room_merchandise" TEXT,
+    "room_meals" TEXT,
+    "status_" CHAR(512),
+    "extended_" CHAR(1),
+    "check_in" TIMESTAMP,
+    "check_out" TIMESTAMP,
+    "room_number" CHAR(512),
+    "cashier_" CHAR(512),
+    "total_price" CHAR(512),
+    "mer_price" CHAR(512),
+    "rm_price" CHAR(512),
+    "price_" CHAR(512),
+    "uploaded_to_cloud" CHAR(1)
+);

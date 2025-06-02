@@ -1,0 +1,16 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icons/3.jpg</file>
+    <file>icons/booked.png</file>
+    <file>icons/cashier.png</file>
+    <file>icons/emp.png</file>
+    <file>icons/grocery.png</file>
+    <file>icons/home.jpg</file>
+    <file>icons/if_8_375259.png</file>
+    <file>icons/logo.png</file>
+    <file>icons/picking.png</file>
+    <file>icons/report.png</file>
+    <file>icons/settings.png</file>
+    <file>icons/oc2.jpg</file>
+  </qresource>
+</RCC>

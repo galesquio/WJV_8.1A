@@ -1,0 +1,13 @@
+Resource/billing.txt
+WJV_INN.spec
+dist/
+build/
+logs/
+__pycache__/
+mainwindow.py.bak
+room_rates.txt
+__pycache__/about_rc.cpython-310.pyc
+__pycache__/HASS_devices.cpython-310.pyc
+__pycache__/mainwindow.cpython-310.pyc
+__pycache__/my_signal.cpython-310.pyc
+__pycache__/new_icons_rc.cpython-310.pyc
